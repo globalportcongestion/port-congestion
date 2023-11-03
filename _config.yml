@@ -30,3 +30,9 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+
+# In _config.yml
+# sphinx:
+#   config:
+#     bibtex_reference_style: label
+#     bibtex_bibfiles: "references.bib"

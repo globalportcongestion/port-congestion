@@ -9,3 +9,5 @@ Check out the content pages bundled with this sample book to see more.
 
 ```{tableofcontents}
 ```
+
+<!-- This is a link of [excel file](./data/vessels_info.xlsx). -->
