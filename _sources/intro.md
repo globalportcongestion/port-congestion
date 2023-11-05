@@ -1,13 +1,6 @@
-# Welcome to your Jupyter Book
+# Introduction
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
-
-Check out the content pages bundled with this sample book to see more.
+This website is used to present the latest progress of our group's research and to share our findings and related data. If you are inspired by our research, we would be happy to have you cite our articles.
 
 ```{tableofcontents}
 ```
-
-<!-- This is a link of [excel file](./data/vessels_info.xlsx). -->
