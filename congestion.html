@@ -62,7 +62,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'congestion';</script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Introduction" href="intro.html" />
@@ -376,13 +379,23 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="congestion-of-ports">
 <h1>Congestion of Ports<a class="headerlink" href="#congestion-of-ports" title="Permalink to this heading">#</a></h1>
-<p>How we measure the congestion of container ports?</p>
+<p>We define two congestion indicators:</p>
+<p>(1) Average Congestion Time (ACT), which is the average waiting time of a ship at the anchorage before it berths at the terminal,</p>
+<div class="math notranslate nohighlight">
+\[
+\text{ACT} = \frac{\text{Total congestion time of this month}}{\text{The total number of ships visiting this port during this month}}
+\]</div>
+<p>(2) Average Congestion Rate (ACR), which is the ratio of ships that moor at anchorage before berthing at the terminal over the total number of ship visits at a port,</p>
+<div class="math notranslate nohighlight">
+\[
+\text{ACR} = \frac{\text{The total number of ships suffering from congestion in this port during this month}}{\text{The total number of ships visiting this port during this month}}
+\]</div>
 <section id="ima-dbscan">
 <h2>IMA-DBSCAN<a class="headerlink" href="#ima-dbscan" title="Permalink to this heading">#</a></h2>
-<p>In the study of <span id="id1">Bai <em>et al.</em> [<a class="reference internal" href="#id8" title="Xiwen Bai, Zhongjun Ma, Yao Hou, Yiliang Li, and Dong Yang. A data-driven iterative multi-attribute clustering algorithm and its application in port congestion estimation. IEEE Transactions on Intelligent Transportation Systems, ():1-12, 2023. doi:10.1109/TITS.2023.3286477.">BMH+23</a>]</span>, the authors proposed an berth detection algorithm. The algorithm is applied to measure congestion at 20 major container ports in the world. The related data can be downloaded by clicking the following links:</p>
+<p>In the study of <span id="id1">Bai <em>et al.</em> [<a class="reference internal" href="#id8" title="Xiwen Bai, Zhongjun Ma, Yao Hou, Yiliang Li, and Dong Yang. A data-driven iterative multi-attribute clustering algorithm and its application in port congestion estimation. IEEE Transactions on Intelligent Transportation Systems, ():1-12, 2023. doi:10.1109/TITS.2023.3286477.">BMH+23</a>]</span>, the authors proposed an berth detection algorithm, which is called an iterative, multi-attribute DBSCAN (IMA-DBSCAN). The algorithm is applied to measure congestion at 20 major container ports in the world. The related data can be downloaded by clicking the following links:</p>
 <ul class="simple">
-<li><p><a class="reference download internal" download="" href="_downloads/075a716d72af36d5609a009f7357c634/ACR.xlsx"><span class="xref download myst">ACR of top 20 container ports in 2020</span></a></p></li>
 <li><p><a class="reference download internal" download="" href="_downloads/ab8c11c46e68fb73d99127ecc16a9afd/ACT.xlsx"><span class="xref download myst">ACT of top 20 container ports in 2020</span></a></p></li>
+<li><p><a class="reference download internal" download="" href="_downloads/075a716d72af36d5609a009f7357c634/ACR.xlsx"><span class="xref download myst">ACR of top 20 container ports in 2020</span></a></p></li>
 </ul>
 <div class="docutils container" id="id2">
 <dl class="citation">
